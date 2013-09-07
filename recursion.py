@@ -1,4 +1,4 @@
-#!/usr/bin
+#recursion.py
 #recursion with modulus expression
 #
 #recursion input
@@ -12,6 +12,12 @@ mod_list=[]
 mod_list_temp=[]
 mod_divisible=[]
 mod_not_divisible=[]
+
+#Parameters
+#start - 0
+#flags  - 0
+#div_ -	False
+#not_div_ -False
 
 def recursion(start,flags,div_,not_div_):
     if not flags:
@@ -30,14 +36,11 @@ def recursion(start,flags,div_,not_div_):
 		    if mod_list_temp[check_idx] == mod:
 			
 			dup=True
-			flags=1
 		    else:
 			mod_list_temp.append(mod)
 		
 		if not dup:
-		    mod_list.append(mod)
-			
-		    flags=1
+		    mod_list.append(mod)			
 		flags=1    
             
     if start<=recursion_limit:
@@ -50,9 +53,6 @@ def recursion(start,flags,div_,not_div_):
 	    else:
 		mod_not_divisible.append(mod_list[mod_idx])
 		not_div_=True
-		       #Check duplicates before appending
-		      
-		
 			   
 	if div_:
 	    if not len(mod_divisible)==0:
@@ -61,10 +61,10 @@ def recursion(start,flags,div_,not_div_):
 	    if not len(mod_not_divisible)==0:
 		print "%d is not divisible by %s" %(start,mod_not_divisible)
 	       
-	       #recursion level update
+	#recursion level update
 	start=start+1
 	       
-	    #clear list content
+	#clear list content
 	mod_divisible[:]=[]
 	mod_not_divisible[:]=[]	
 	
