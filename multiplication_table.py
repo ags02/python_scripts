@@ -7,9 +7,15 @@
 #@range=integer  #
 ##################
 
+<<<<<<< HEAD
 ####################################
 #Tested in python2.7 using WingIDE #
 ####################################
+=======
+######################
+#Tested in python3.3 #
+######################
+>>>>>>> cd0537348b74da580369aa53c852c4a65480a959
 flags=True
 while flags:
     multi_table_range=int(input("Enter multiplication table range (max. is 30): "))
@@ -26,6 +32,7 @@ while flags:
         #x_base
         #First x base position for multiplication
         for x_base in range(0,multi_table_range+1):
+<<<<<<< HEAD
 			
            
             #print (end='')
@@ -50,6 +57,26 @@ while flags:
                     
                     #print (x_base,end='    ')
 					print str(x_base)+'   ',
+=======
+           
+            print (end='')
+            
+            if(len(str(x_base))==2):
+                
+                print (x_base,end='   ')
+            elif (len(str(x_base))==3):
+              
+                print (x_base,end='   ')
+            else:
+                
+                if x_base==0:
+                    
+                    print ('#',end='    ')
+                    print (x_base,end='    ')
+                else:
+                    
+                    print (x_base,end='    ')
+>>>>>>> cd0537348b74da580369aa53c852c4a65480a959
                     
                  
                 
@@ -60,6 +87,7 @@ while flags:
         #to make it exactly
        
         for x in range(0,multi_table_range+1):
+<<<<<<< HEAD
 			
             
             #print()
@@ -92,6 +120,32 @@ while flags:
 					else:
                    # print (result,end='    ')
 						print str(result)+'    ',
+=======
+            
+            print()
+            if(len(str(x))==2):
+                print (x,end='   ')
+                    
+            elif (len(str(x))==3):
+                print (x,end='   ')
+                     
+            else:
+                print (x,end='    ')
+            
+            for y in range(0,multi_table_range+1):
+                
+                    
+                result=x*y
+            
+                if(len(str(result))==2):
+                    print (result,end='   ')
+                    
+                elif (len(str(result))==3):
+                     print (result,end='  ')
+                     
+                else:
+                    print (result,end='    ')
+>>>>>>> cd0537348b74da580369aa53c852c4a65480a959
         
            
         
